@@ -1,7 +1,7 @@
 ##############################################################################################################
 # An R.script for generating SNP frequencies from sequence alignments
 # It takes an alignment from CLC exported in Phylip format
-# change the input file at the load data step to match your input file
+# change the input file at the load data step to match your input file at line 23
 ##############################################################################################################
 #clear environment
 rm(list = ls())

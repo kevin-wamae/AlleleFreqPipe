@@ -1,4 +1,4 @@
-# R-Toolkit_snpFreqExtract
+# R-Toolkit_FreqSNP
 An R pipeline for extracting single nucleotide polymorphisms (SNPs) from DNA 
 sequence alignments and computing their frequencies.
 

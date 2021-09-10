@@ -8,7 +8,7 @@ An R script for generating allele frequencies from DNA/amino acid sequence align
 * Incase you choose to use Aliview, load your alignmnent and click on:
   * File -> Save as Phylip (full names & padded)
 
-* Point the script to your input file in the `03_data_input` directory at line 25.
+* Point the script to your input file in the `03_data_input` directory (line 25).
 
 * Run the entire script and you'll find your output in the `04_data_output` directory, which will look like the example below.
 

@@ -12,7 +12,7 @@ An R script for generating allele frequencies from DNA/amino acid sequence align
 
 * Run the entire script and you'll find your output in the `04_data_output` directory, which will look like the example below.
 
-* The dominant/major allele is grouped under `major`, while minor variants are grouped under `minor_1`, `minor_2`, e.t.c.
+* The dominant/major alleles are grouped under `major`, while minor variants are grouped under `minor_1`, `minor_2`, e.t.c.
 
 | locus | major         | minor_1       | minor_2      |
 |-------|---------------|---------------|--------------|

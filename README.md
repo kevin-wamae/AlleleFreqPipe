@@ -1,31 +1,31 @@
-# R-Toolkit_FreqSNP
-An R pipeline for extracting single nucleotide polymorphisms (SNPs) from DNA 
-sequence alignments and computing their frequencies.
+# R-Toolkit - FreqAllele
+An R script for generating allele frequencies from DNA/amino acid sequence alignments.
 
-The script takes as input a DNA sequence alignment in Phylip format and generates 
-a frequency table of all SNPs and as well as a list of the polymorphic loci.
+It's worth noting that the script (inside the `01_R_scripts` directory) ignores indels/gaps in the alignment
 
-I am still trying to work out how to present the output "example_snpFreq.csv" (shown below),
-so as to have one row for bi-allelic SNPs, two rows for tri-allelic SNPs and so on,
-contrary to what is seen e.g. with the SNP at locus 250 that takes up two rows.
+* The input is an alignment in Phylip format which can be generated in many programs such as [Aliview](https://ormbunkar.se/aliview/).
 
-| locus | Wildtype | Wildtype_Freq | Mutant | Mutant_Freq |
-|-------|----------|---------------|--------|-------------|
-| 211   | A        | 2.8 [3]       | G      | 97.2 [104]  |
-| 250   |          |               | G      | 3.8 [4]     |
-| 250   |          |               | T      | 96.2 [102]  |
-| 1116  |          |               | C      | 98.9 [88]   |
-| 1116  |          |               | T      | 1.1 [1]     |
+* Incase you choose to use Aliview, load your alignmnent and click on:
+  * File -> Save as Phylip (full names & padded)
 
+* Point the script to your input file in the `03_data_input` directory at line 25.
 
-Below is the expected output (I moved the entries manually).
+* Run the entire script and you'll find your output in the `04_data_output` directory, which will look like the example below.
 
-| locus | Wildtype | Wildtype_Freq | Mutant | Mutant_Freq |
-|-------|----------|---------------|--------|-------------|
-| 211   | A        | 2.8 [3]       | G      | 97.2 [104]  |
-| 250   | G        | 3.8 [4]       | T      | 96.2 [102]  |
-| 1116  | C        | 98.9 [88]     | T      | 1.1 [1]     |
+* The dominant/major allele is grouped under `major`, while minor variants are grouped under `minor_1`, `minor_2`, e.t.c.
 
-NB: Also, the script does not incorporate information on wildtype vs. mutant alleles, 
-hence, "Adenine" is assumed to always be the wild-type (see SNP at locus 211), followed 
-by any other nucleotide in alphabetical order
+| locus | major         | minor_1       | minor_2      |
+|-------|---------------|---------------|--------------|
+| 64    | A / 98 [49]   | G / 2 [1]     |              |
+| 79    | A / 97.9 [47] | G / 2.1 [1]   |              |
+| 241   | A / 98 [50]   | T / 2 [1]     |              |
+| 448   | T / 96 [48]   | A / 4 [2]     |              |
+| 467   | G / 98 [49]   | A / 2 [1]     |              |
+| 470   | A / 82 [41]   | G / 18 [9]    |              |
+| 502   | G / 98.1 [53] | C / 1.9 [1]   |              |
+| 515   | A / 98.2 [56] | G / 1.8 [1]   |              |
+| 592   | A / 98.6 [69] | T / 1.4 [1]   |              |
+| 593   | C / 98.6 [69] | A / 1.4 [1]   |              |
+| 676   | A / 93.4 [71] | G / 3.9 [3]   | R / 2.6 [2]  |
+| 820   | G / 56.2 [45] | A / 40 [32]   | R / 3.8 [3]  |
+| 835   | G / 65 [52]   | A / 33.8 [27] | R / 1.2 [1]  |

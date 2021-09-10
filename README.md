@@ -6,7 +6,7 @@ An R script for generating allele frequencies from DNA/amino acid sequence align
 * Input is an alignment in Phylip format which can be generated in many programs such as [Aliview](https://ormbunkar.se/aliview/).
 
 * Incase you choose to use Aliview, load your alignmnent and click on:
-  * File -> Save as Phylip (full names & padded)
+  * `File -> Save as Phylip (full names & padded)`
 
 * Point the script to your input file in the `03_data_input` directory (line 25).
 
